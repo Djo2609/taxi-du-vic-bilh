@@ -1,0 +1,30 @@
+# Taxi du Vic-Bilh
+
+> Entreprise familiale de taxi basée à Saint-Jean-Poudge (64330, Pyrénées-Atlantiques, Nouvelle-Aquitaine), au cœur du Vic-Bilh (Béarn). Taxi conventionné par la CPAM (Assurance Maladie). Transport médical assis, transferts gares et aéroports, longue distance, déplacements professionnels et particuliers. Toutes distances, 24h/24 et 7j/7, sur réservation au 06 12 69 43 31.
+
+## Informations clés
+
+- Nom : Taxi du Vic-Bilh (Taxi du Vic Bilh – Service de taxi conventionné)
+- Téléphone / réservation : +33 6 12 69 43 31 (06 12 69 43 31)
+- E-mail : taxiduvicbilh@gmail.com
+- Localisation : Saint-Jean-Poudge, 64330, France (lat. 43.5264, long. -0.1836)
+- Horaires : ouvert 24h/24, 7j/7, jours fériés compris, sur réservation
+- Conventionnement : taxi conventionné CPAM (transport assis professionnalisé sur prescription médicale de transport, tiers payant)
+- Équipe et véhicules : entreprise familiale (le père, la mère et leur fils), trois taxis dont deux SUV électriques (un gris argent, un lilas) ; jusqu'à 4 passagers par véhicule, sièges enfants sur demande
+- Zone : Vic-Bilh (Garlin, Lembeye, Conchez-de-Béarn, Madiran…), Béarn, Pau, Tarbes, Aire-sur-l'Adour, Mont-de-Marsan ; toutes distances, Espagne comprise (Bordeaux, Toulouse, Biarritz, Saint-Sébastien, Pampelune, Saragosse…)
+- Facebook : https://www.facebook.com/people/Taxi-du-Vic-Bilh-Service-de-taxi-conventionn%C3%A9/61567440904343/
+
+## Structure du site (one-page)
+
+Le site tient sur une seule page : https://www.taxiduvicbilh.fr/
+
+- [La famille](https://www.taxiduvicbilh.fr/#famille): entreprise familiale (parents et enfants), valeurs et promesses de service
+- [Nos trajets](https://www.taxiduvicbilh.fr/#services): une journée type, avec gares et aéroports, taxi conventionné CPAM, trajets du quotidien, longue distance, professionnels, fêtes et sorties
+- [Taxi conventionné CPAM](https://www.taxiduvicbilh.fr/#cpam): transport médical assis, documents à fournir, accord préalable, tiers payant
+- [Zone desservie](https://www.taxiduvicbilh.fr/#zone): communes du Vic-Bilh et distances vers Pau, Tarbes, Bordeaux, Toulouse, Biarritz
+- [Questions fréquentes](https://www.taxiduvicbilh.fr/#faq): disponibilité, remboursement, enfants, tarifs, capacité, réservation
+- [Contact et réservation](https://www.taxiduvicbilh.fr/#contact): téléphone, e-mail, formulaire, carte
+
+## Optionnel
+
+- [Mentions légales](https://www.taxiduvicbilh.fr/mentions-legales.html)
