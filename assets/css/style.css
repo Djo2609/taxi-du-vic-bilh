@@ -166,7 +166,7 @@ address { font-style: normal; }
 }
 .nav a:hover { background: var(--lilac-soft); }
 .nav .is-optional { display: none; }
-@media (min-width: 1200px) { .nav .is-optional { display: list-item; } }
+@media (min-width: 1340px) { .nav .is-optional { display: list-item; } }
 .nav a[aria-current="page"], .nav a[aria-current="location"] { background: var(--ink); color: var(--on-ink); }
 
 /* Bouton « lumineux » : le téléphone en enseigne de toit */
@@ -181,6 +181,15 @@ address { font-style: normal; }
 .roof-call__tag { background: var(--taxi); color: var(--ink); border-radius: var(--r-pill); padding: .3rem .7rem; font-size: .8rem; letter-spacing: .12em; display: inline-flex; align-items: center; gap: .4rem; }
 .roof-call__tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #1FA463; box-shadow: 0 0 0 3px rgba(31,164,99,.25); }
 
+.header-actions { display: flex; align-items: center; gap: var(--s-2); }
+.social-btn {
+  display: inline-grid; place-items: center; width: 48px; height: 48px; flex: none; border-radius: 50%;
+  background: var(--lilac-soft); color: var(--lilac-deep); text-decoration: none;
+  transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+.social-btn .icon { width: 24px; height: 24px; }
+.social-btn:hover { background: #1877F2; color: #fff; }
+.social-btn:active { transform: scale(.94); }
 .menu-toggle {
   display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-width: 48px; min-height: 48px; padding: 0 .9rem;
   border: 2px solid var(--ink); background: transparent; color: var(--ink); border-radius: var(--r-pill);
@@ -196,10 +205,12 @@ address { font-style: normal; }
 .mobile-nav a { display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 var(--s-2); font: 600 1.25rem var(--font-display); text-decoration: none; border-bottom: 1px dashed var(--line); }
 .mobile-nav a[aria-current="page"], .mobile-nav a[aria-current="location"] { color: var(--lilac-deep); }
 
-@media (min-width: 1024px) {
-  .nav, .roof-call { display: inline-flex; }
+@media (min-width: 1024px) { .roof-call { display: inline-flex; } }
+@media (min-width: 1200px) {
+  .nav { display: inline-flex; }
   .menu-toggle, .mobile-nav, .mobile-nav.is-open { display: none; }
 }
+.nav a { white-space: nowrap; }
 
 /* ---------- 6. Signature : borne kilométrique ---------- */
 .borne {
