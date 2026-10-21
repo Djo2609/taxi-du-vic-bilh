@@ -14,17 +14,20 @@
 - Zone : Vic-Bilh (Garlin, Lembeye, Conchez-de-Béarn, Madiran…), Béarn, Pau, Tarbes, Aire-sur-l'Adour, Mont-de-Marsan ; toutes distances, Espagne comprise (Bordeaux, Toulouse, Biarritz, Saint-Sébastien, Pampelune, Saragosse…)
 - Facebook : https://www.facebook.com/people/Taxi-du-Vic-Bilh-Service-de-taxi-conventionn%C3%A9/61567440904343/
 
-## Structure du site (one-page)
+## Pages principales
 
-Le site tient sur une seule page : https://www.taxiduvicbilh.fr/
-
-- [La famille](https://www.taxiduvicbilh.fr/#famille): entreprise familiale (parents et enfants), valeurs et promesses de service
-- [Nos trajets](https://www.taxiduvicbilh.fr/#services): une journée type, avec gares et aéroports, taxi conventionné CPAM, trajets du quotidien, longue distance, professionnels, fêtes et sorties
-- [Taxi conventionné CPAM](https://www.taxiduvicbilh.fr/#cpam): transport médical assis, documents à fournir, accord préalable, tiers payant
-- [Zone desservie](https://www.taxiduvicbilh.fr/#zone): communes du Vic-Bilh et distances vers Pau, Tarbes, Bordeaux, Toulouse, Biarritz
-- [Questions fréquentes](https://www.taxiduvicbilh.fr/#faq): disponibilité, remboursement, enfants, tarifs, capacité, réservation
-- [Contact et réservation](https://www.taxiduvicbilh.fr/#contact): téléphone, e-mail, formulaire, carte
+- [Accueil](https://www.taxiduvicbilh.fr/): présentation de la famille, services, planificateur de trajet, CPAM, tableau des distances, FAQ
+- [La famille](https://www.taxiduvicbilh.fr/a-propos.html): le père, la mère et le fils, un taxi chacun ; valeurs et « règles de la maison »
+- [Services](https://www.taxiduvicbilh.fr/services.html): une journée type, de 5 h (aéroport) à 23 h 30 (retour de mariage)
+- [Taxi conventionné CPAM](https://www.taxiduvicbilh.fr/service-taxi-conventionne-cpam.html): transport médical assis, documents à fournir, accord préalable, tiers payant
+- [Gares et aéroports](https://www.taxiduvicbilh.fr/service-taxi-gare-aeroport.html): Pau-Pyrénées, Tarbes-Lourdes, Bordeaux-Mérignac, Toulouse-Blagnac, Biarritz, gares de la région
+- [Longue distance et Espagne](https://www.taxiduvicbilh.fr/service-taxi-longue-distance.html): Bordeaux, Toulouse, côte basque, Saint-Sébastien, Pampelune, Saragosse ; devis gratuit
+- [Professionnels](https://www.taxiduvicbilh.fr/service-taxi-professionnels.html): transferts de collaborateurs, rendez-vous clients, facture
+- [Particuliers et sorties](https://www.taxiduvicbilh.fr/service-taxi-particuliers.html): courses du quotidien, enfants (sièges auto), mariages, soirées
+- [Contact et réservation](https://www.taxiduvicbilh.fr/contact.html): téléphone, e-mail, planificateur « On part à quelle heure ? », formulaire, carte, zone desservie
 
 ## Optionnel
 
+- [Sur la route](https://www.taxiduvicbilh.fr/realisations.html): album photo des trajets
+- [Avis clients](https://www.taxiduvicbilh.fr/avis.html)
 - [Mentions légales](https://www.taxiduvicbilh.fr/mentions-legales.html)

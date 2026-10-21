@@ -6,43 +6,39 @@ Site statique multipage (HTML + un seul fichier CSS + un petit JS). Il n'y a ni 
 
 ## 1. Structure du dossier
 
-Le site est un **one-page** : tout le contenu tient dans `index.html`, découpé en sections accessibles depuis le menu (ancres).
+Site **multipage** : une page par sujet et **une page par service** (c'est ce qui fait remonter chaque prestation sur Google).
 
 ```
 /
-├── index.html                 La page unique (voir sections ci-dessous)
-├── mentions-legales.html      Mentions légales + RGPD (page séparée, obligatoire, non indexée)
-├── sitemap.xml                Plan du site pour Google
-├── robots.txt                 Autorise l'indexation, pointe vers le sitemap
-├── llms.txt                   Résumé du site pour les moteurs IA (ChatGPT, Perplexity…)
-├── favicon.svg                Icône d'onglet
-├── assets/
-│   ├── css/style.css          Feuille de styles unique (tokens en haut du fichier)
-│   ├── js/main.js             Menu mobile, section active du menu, animations, formulaire
-│   └── img/                   Images .webp optimisées, image de partage, icône iPhone
-└── _archive-multipage/        Ancienne version multipage (référence uniquement, NE PAS mettre en ligne)
+├── index.html                              Accueil : carte postale, la famille (extrait), services, planificateur, CPAM, distances, avis, FAQ
+├── a-propos.html                           La famille : lettre, album, « Les règles de la maison », repères
+├── services.html                           « Une journée avec nous » : frise 5 h → 23 h 30, chaque étape mène à sa page
+├── service-taxi-conventionne-cpam.html     Service : transport médical conventionné CPAM
+├── service-taxi-gare-aeroport.html         Service : gares & aéroports
+├── service-taxi-longue-distance.html       Service : toutes distances, Espagne comprise
+├── service-taxi-professionnels.html        Service : professionnels
+├── service-taxi-particuliers.html          Service : particuliers, enfants, mariages & soirées
+├── realisations.html                       « Sur la route » : album photo
+├── avis.html                               Avis clients (invitation Google / Facebook, engagements)
+├── contact.html                            Planificateur « On part à quelle heure ? », formulaire, carte, zone desservie
+├── mentions-legales.html                   Mentions légales + RGPD (non indexée)
+├── sitemap.xml / robots.txt / llms.txt     Référencement (Google et moteurs IA)
+├── favicon.svg
+└── assets/
+    ├── css/style.css                       Feuille de styles unique (tokens en haut du fichier)
+    ├── js/main.js                          Menu mobile, animations, planificateur, formulaire
+    └── img/                                Images .webp optimisées, image de partage, icône iPhone
 ```
-
-### Sections de la page (ancres)
-
-| Ancre | Section |
-|---|---|
-| `#accueil` | Accroche + **carte postale** « Bons baisers du Vic-Bilh » (timbre et tampon dessinés en SVG) |
-| *(bande sombre)* | Le numéro de téléphone en grand |
-| `#famille` | La lettre de la famille + album de 3 polaroïds, puis **« Les règles de la maison »** (note aimantée sur le frigo) |
-| `#services` | « Une journée avec nous » : les 6 services en frise horaire (5 h → 23 h 30) |
-| `#planificateur` | **« On part à quelle heure ? »** : outil interactif (destination, heure du rendez-vous, adultes / enfants, bagages) → heure de passage conseillée, sièges enfants, 1 ou 2 taxis, puis pré-remplissage du formulaire |
-| `#cpam` | Taxi conventionné CPAM : 3 étapes + documents à prévoir |
-| *(bande sombre)* | Tableau de route (distances) |
-| `#zone` | Communes desservies + polaroïds « sur la route » |
-| `#avis` | Invitation à laisser un avis Google / Facebook |
-| `#faq` | Questions fréquentes (balisées en FAQPage pour Google) |
-| `#contact` | Coordonnées, carte, formulaire de réservation |
 
 > Le brief demandait un `llm.txt` : le fichier s'appelle **`llms.txt`**, le nom standard que lisent les robots IA.
 
-### Note SEO : one-page ou multipage ?
-Un one-page ne se positionne que sur **une** URL : il est moins fort qu'un site avec une page par service pour se classer sur plusieurs requêtes (« taxi conventionné Garlin », « taxi aéroport Pau »…). Pour compenser, la page reprend les mots-clés métier dans ses titres et sa FAQ, et ses données structurées décrivent chaque service (`OfferCatalog`) et chaque question (`FAQPage`). Si le client veut plus de visibilité plus tard, la version multipage est conservée dans `_archive-multipage/`.
+### Éléments signature
+- **Carte postale** « Bons baisers du Vic-Bilh » en haut de l'accueil (timbre et tampon dessinés en SVG).
+- **Planificateur « On part à quelle heure ? »** (accueil et contact) : destination, heure du rendez-vous, adultes / enfants, bagages → heure de passage conseillée, sièges enfants, 1 ou 2 taxis. « Réserver ce trajet » pré-remplit le formulaire de `contact.html` (paramètres d'URL).
+- **« Les règles de la maison »** (page La famille) : note aimantée sur le frigo.
+- **Frise « Une journée avec nous »** (page Services) sur une route dessinée, avec les heures dans des bornes kilométriques.
+
+> La version one-page précédente reste disponible dans l'historique git (commit « Ajoute un bouton Facebook dans le header »).
 
 ---
 
@@ -61,9 +57,9 @@ Ouvrez ensuite http://localhost:8000.
 ## 3. Avant la mise en ligne (obligatoire)
 
 1. **Nom de domaine.** Le site part du principe que l'adresse sera `https://www.taxiduvicbilh.fr`. Si l'adresse est différente, faites un « rechercher / remplacer » de `https://www.taxiduvicbilh.fr` dans **tous** les fichiers (`.html`, `sitemap.xml`, `robots.txt`, `llms.txt`).
-2. **Formulaire de réservation** (section `#contact` de `index.html`) :
+2. **Formulaire de réservation** (page `contact.html`) :
    - Créez un compte gratuit sur https://formspree.io avec l'adresse `taxiduvicbilh@gmail.com`, puis créez un formulaire.
-   - Remplacez `VOTRE_ID` dans `index.html` (`action="https://formspree.io/f/VOTRE_ID"`) par l'identifiant fourni.
+   - Remplacez `VOTRE_ID` dans `contact.html` (`action="https://formspree.io/f/VOTRE_ID"`) par l'identifiant fourni.
    - Tant que ce n'est pas fait, le bouton « Envoyer » ouvre la messagerie du visiteur avec la demande pré-remplie : aucune demande n'est perdue.
 3. **Mentions légales** : remplissez tout ce qui est entre crochets `[ ]` dans `mentions-legales.html`.
 4. **Commentaires `À VALIDER`** : recherchez `À VALIDER`, `À COMPLÉTER`, `À FOURNIR` et `À INTÉGRER` dans les fichiers HTML. Chaque commentaire signale une information à confirmer avec le client (voir `A-FOURNIR.md`).
@@ -82,7 +78,7 @@ Ouvrez ensuite http://localhost:8000.
 2. Envoyez **le contenu** du dossier (pas le dossier lui-même) dans le répertoire `www/` ou `public_html/`.
 3. Activez le certificat SSL (Let's Encrypt) dans le panneau de l'hébergeur.
 
-> Ne pas envoyer les dossiers `.claude/` (aperçu local) et `_archive-multipage/` (ancienne version).
+> Ne pas envoyer le dossier `.claude/` (aperçu local), ni `README.md` et `A-FOURNIR.md` (notes internes). Sur Vercel, le fichier `.vercelignore` s'en charge.
 
 ---
 
@@ -90,7 +86,7 @@ Ouvrez ensuite http://localhost:8000.
 
 1. **Google Search Console** (https://search.google.com/search-console) : ajoutez le domaine puis soumettez `https://www.taxiduvicbilh.fr/sitemap.xml`.
 2. **Fiche Google Business Profile** : créez-la ou revendiquez-la (catégorie « Service de taxi »). Indiquez la même adresse, le même téléphone et les mêmes horaires que sur le site, puis ajoutez le lien du site. C'est le levier n°1 pour le référencement local d'un taxi.
-3. Copiez le lien « Demander des avis » de la fiche Google dans la section `#avis` de `index.html`, à la place du lien de recherche Google Maps actuel.
+3. Copiez le lien « Demander des avis » de la fiche Google dans `avis.html` et dans le bandeau avis de `index.html`, à la place du lien de recherche Google Maps actuel.
 4. Ajoutez le lien du site dans la section « À propos » de la page Facebook.
 5. Contrôlez les performances sur https://pagespeed.web.dev (objectif : 90 ou plus).
 6. Testez les données structurées sur https://search.google.com/test/rich-results.
@@ -100,11 +96,12 @@ Ouvrez ensuite http://localhost:8000.
 ## 6. Modifier le site
 
 - **Couleurs et typographie** : tout est centralisé en haut de `assets/css/style.css` (section *Tokens*). Changer une couleur à cet endroit la change sur tout le site.
-- **Ajouter ou modifier un service** : dans `index.html`, section `#services`, chaque étape de la frise est un `<li>` (heure dans la borne, titre, phrase manuscrite, texte, étiquettes). Mettez aussi à jour le bloc JSON-LD `hasOfferCatalog` dans le `<head>` et la liste « Type de trajet » du formulaire.
-- **Planificateur** : les destinations, distances et durées sont dans la liste `<select id="p-dest">` de `index.html` (attributs `data-km`, `data-min` en minutes, `data-time`, `data-type="air"` pour un aéroport). Marges appliquées dans `assets/js/main.js` : 15 min avant un rendez-vous, 1 h 30 avant un vol.
+- **En-tête et pied de page** : identiques sur toutes les pages. Pour changer un lien ou le numéro, faites un rechercher / remplacer dans tous les fichiers `.html`.
+- **Ajouter une page service** : dupliquez une page `service-*.html`, changez `<title>`, `meta description`, `canonical`, Open Graph, H1, JSON-LD et contenu ; ajoutez-la au pied de page, à `services.html` (frise), à `sitemap.xml` et à `llms.txt`.
+- **Planificateur** : destinations, distances et durées dans la liste `<select id="p-dest">` de `index.html` **et** de `contact.html` (attributs `data-km`, `data-min` en minutes, `data-time`, `data-type="air"` pour un aéroport). Marges dans `assets/js/main.js` : 15 min avant un rendez-vous, 1 h 30 avant un vol.
 - **Phrases manuscrites** (police Caveat, classe `.hand`) : à garder pour les petites notes personnelles uniquement.
 - **Images** : utilisez du `.webp` (convertisseur gratuit : https://squoosh.app), gardez des noms de fichiers en minuscules sans accents, et indiquez `width`, `height` et un `alt` descriptif.
-- **Photo de famille** : remplacez la première photo de l'album (`#famille`) dès qu'elle est disponible (commentaire `À FOURNIR` dans le code).
+- **Photo de famille** : remplacez la grande photo de l'album (section « Une famille au volant » de `index.html` et `a-propos.html`) dès qu'elle est disponible (commentaire `À FOURNIR` dans le code).
 
 ---
 

@@ -70,6 +70,23 @@
     items.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* Pré-remplissage du formulaire de réservation (planificateur ou paramètres d'URL) */
+  function fillBooking(d) {
+    var set = function (id, v) { var f = document.getElementById(id); if (f && v) f.value = v; };
+    set('f-arr', d.arr);
+    set('f-heure', d.heure);
+    set('f-pax', d.pax);
+    set('f-type', d.type);
+    set('f-msg', d.msg);
+  }
+  if (document.getElementById('reserver') && window.URLSearchParams && window.location.search) {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('arr')) {
+      fillBooking({ arr: params.get('arr'), heure: params.get('heure'), pax: params.get('pax'), type: params.get('type'), msg: params.get('msg') });
+      setTimeout(function () { var n = document.getElementById('f-nom'); if (n) n.focus({ preventScroll: true }); }, 400);
+    }
+  }
+
   /* Le planificateur de la famille : « On part à quelle heure ? » */
   var planner = document.getElementById('planner');
   if (planner) {
@@ -149,18 +166,24 @@
     [dest, rdv, bag].forEach(function (el) { el.addEventListener('change', render); el.addEventListener('input', render); });
 
     // « Réserver ce trajet » : pré-remplit le formulaire de contact
+    // (sur la même page s'il existe, sinon via contact.html?… )
     $('p-book').addEventListener('click', function () {
-      var set = function (id, v) { var f = $(id); if (f) f.value = v; };
-      set('f-arr', state.name);
-      set('f-dep', '');
-      if (state.dep !== null) set('f-heure', hhmm(state.dep));
-      var pax = $('f-pax');
-      if (pax) pax.value = state.total > 4 ? 'Plus de 4' : String(state.total);
-      var type = $('f-type');
-      if (type && state.air) type.value = 'Gares & aéroports';
-      set('f-msg', 'Rendez-vous / vol à ' + state.rdv + '. ' + plural(state.a, 'adulte', 'adultes') + ', ' +
-        plural(state.e, 'enfant', 'enfants') + (state.e > 0 ? ' (siège auto à prévoir, âges : …)' : '') +
-        (state.bag ? '. Bagages / poussette / fauteuil.' : '.'));
+      var data = {
+        arr: state.name,
+        heure: state.dep !== null ? hhmm(state.dep) : '',
+        pax: state.total > 4 ? 'Plus de 4' : String(state.total),
+        type: state.air ? 'Gares & aéroports' : '',
+        msg: 'Rendez-vous / vol à ' + state.rdv + '. ' + plural(state.a, 'adulte', 'adultes') + ', ' +
+          plural(state.e, 'enfant', 'enfants') + (state.e > 0 ? ' (siège auto à prévoir, âges : …)' : '') +
+          (state.bag ? '. Bagages / poussette / fauteuil.' : '.')
+      };
+      if (!$('reserver')) {
+        var q = Object.keys(data).filter(function (k) { return data[k]; })
+          .map(function (k) { return k + '=' + encodeURIComponent(data[k]); }).join('&');
+        window.location.href = 'contact.html?' + q + '#reserver';
+        return;
+      }
+      fillBooking(data);
       var target = $('reserver');
       target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
       setTimeout(function () { var n = $('f-nom'); if (n) n.focus({ preventScroll: true }); }, 500);
