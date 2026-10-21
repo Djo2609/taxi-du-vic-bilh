@@ -28,11 +28,10 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- Polices (swap) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Familjen+Grotesk:wght@600;700&amp;family=Figtree:wght@400;500;700&amp;display=swap">
-  <link rel="preload" as="image" href="assets/img/taxi-vic-bilh-vehicules-electriques.webp" imagesrcset="assets/img/taxi-vic-bilh-vehicules-electriques-640.webp 640w, assets/img/taxi-vic-bilh-vehicules-electriques.webp 960w" imagesizes="(min-width: 900px) 40vw, 100vw" fetchpriority="high">
+  <!-- Polices auto-hébergées (assets/fonts, déclarées dans style.css) : préchargement des deux principales -->
+  <link rel="preload" href="assets/fonts/familjen-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/taxi-vic-bilh-vehicules-electriques-720.webp" imagesrcset="assets/img/taxi-vic-bilh-vehicules-electriques-480.webp 480w, assets/img/taxi-vic-bilh-vehicules-electriques-720.webp 720w, assets/img/taxi-vic-bilh-vehicules-electriques.webp 960w" imagesizes="(min-width: 1200px) 460px, (min-width: 900px) 38vw, calc(100vw - 64px)" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 
@@ -113,7 +112,7 @@
         <!-- Signature : la carte postale « Bons baisers du Vic-Bilh » (timbre et tampon dessinés en SVG) -->
         <div class="postcard-wrap">
           <figure class="postcard">
-            <img src="assets/img/taxi-vic-bilh-vehicules-electriques.webp" srcset="assets/img/taxi-vic-bilh-vehicules-electriques-640.webp 640w, assets/img/taxi-vic-bilh-vehicules-electriques.webp 960w" sizes="(min-width: 900px) 40vw, 100vw"
+            <img src="assets/img/taxi-vic-bilh-vehicules-electriques-720.webp" srcset="assets/img/taxi-vic-bilh-vehicules-electriques-480.webp 480w, assets/img/taxi-vic-bilh-vehicules-electriques-720.webp 720w, assets/img/taxi-vic-bilh-vehicules-electriques.webp 960w" sizes="(min-width: 1200px) 460px, (min-width: 900px) 38vw, calc(100vw - 64px)"
                  alt="Carte postale : deux taxis de la famille, un gris argent et un lilas, garés sous les arbres devant un mur en galets du Vic-Bilh"
                  width="960" height="736" fetchpriority="high">
             <figcaption><span class="hand">Bons baisers du Vic-Bilh&nbsp;!</span><small>Saint-Jean-Poudge · 64</small></figcaption>
@@ -155,9 +154,9 @@
         </div>
         <div class="album album--duo reveal" aria-label="Notre album">
           <!-- Les trois taxis de la famille : celui du père, de la mère et du fils -->
-          <figure class="polaroid polaroid--wide"><img src="assets/img/trois-taxis-famille-vic-bilh.webp" srcset="assets/img/trois-taxis-famille-vic-bilh-640.webp 640w, assets/img/trois-taxis-famille-vic-bilh.webp 1080w" sizes="(min-width: 900px) 520px, 100vw" alt="Les trois taxis de la famille Taxi du Vic-Bilh, celui du père, de la mère et du fils, garés côte à côte devant un mur en galets sous les arbres" width="1080" height="655" loading="lazy" decoding="async"><figcaption>Papa, maman et fiston : un taxi chacun&nbsp;!</figcaption></figure>
-          <figure class="polaroid"><img src="assets/img/taxi-route-coteaux-coucher-soleil.webp" alt="Le taxi lilas sur une route des coteaux au lever du soleil" width="590" height="266" loading="lazy" decoding="async"><figcaption>Départ à l'aube</figcaption></figure>
-          <figure class="polaroid"><img src="assets/img/taxi-recharge-espagne.webp" alt="Le taxi électrique gris argent de la famille en recharge sur une borne rapide en Espagne" width="900" height="675" loading="lazy" decoding="async"><figcaption>Petite recharge en Espagne</figcaption></figure>
+          <figure class="polaroid polaroid--wide"><img src="assets/img/trois-taxis-famille-vic-bilh-800.webp" srcset="assets/img/trois-taxis-famille-vic-bilh-480.webp 480w, assets/img/trois-taxis-famille-vic-bilh-800.webp 800w, assets/img/trois-taxis-famille-vic-bilh.webp 1080w" sizes="(min-width: 900px) 496px, calc(100vw - 64px)" alt="Les trois taxis de la famille Taxi du Vic-Bilh, celui du père, de la mère et du fils, garés côte à côte devant un mur en galets sous les arbres" width="1080" height="655" loading="lazy" decoding="async"><figcaption>Papa, maman et fiston : un taxi chacun&nbsp;!</figcaption></figure>
+          <figure class="polaroid"><img src="assets/img/taxi-route-coteaux-coucher-soleil-400.webp" alt="Le taxi lilas sur une route des coteaux au lever du soleil" width="400" height="180" loading="lazy" decoding="async"><figcaption>Départ à l'aube</figcaption></figure>
+          <figure class="polaroid"><img src="assets/img/taxi-recharge-espagne-480.webp" srcset="assets/img/taxi-recharge-espagne-480.webp 480w, assets/img/taxi-recharge-espagne.webp 900w" sizes="(min-width: 600px) 230px, 42vw" alt="Le taxi électrique gris argent de la famille en recharge sur une borne rapide en Espagne" width="900" height="675" loading="lazy" decoding="async"><figcaption>Petite recharge en Espagne</figcaption></figure>
         </div>
       </div>
     </section>

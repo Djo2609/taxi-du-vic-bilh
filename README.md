@@ -100,7 +100,16 @@ Ouvrez ensuite http://localhost:8000.
 - **Ajouter une page service** : dupliquez une page `service-*.html`, changez `<title>`, `meta description`, `canonical`, Open Graph, H1, JSON-LD et contenu ; ajoutez-la au pied de page, à `services.html` (frise), à `sitemap.xml` et à `llms.txt`.
 - **Planificateur** : destinations, distances et durées dans la liste `<select id="p-dest">` de `index.html` **et** de `contact.html` (attributs `data-km`, `data-min` en minutes, `data-time`, `data-type="air"` pour un aéroport). Marges dans `assets/js/main.js` : 15 min avant un rendez-vous, 1 h 30 avant un vol.
 - **Phrases manuscrites** (police Caveat, classe `.hand`) : à garder pour les petites notes personnelles uniquement.
-- **Images** : utilisez du `.webp` (convertisseur gratuit : https://squoosh.app), gardez des noms de fichiers en minuscules sans accents, et indiquez `width`, `height` et un `alt` descriptif.
+- **Images** : utilisez du `.webp` (convertisseur gratuit : https://squoosh.app), gardez des noms de fichiers en minuscules sans accents, et indiquez `width`, `height` et un `alt` descriptif. Pour les grandes photos, fournissez plusieurs tailles (ex. `-480`, `-800`, pleine taille) avec `srcset` / `sizes`, comme sur la carte postale de l'accueil : le mobile télécharge alors la petite version.
+- **Polices** : hébergées dans `assets/fonts/` (Familjen Grotesk, Figtree, Caveat, licence SIL OFL), déclarées en haut de `style.css`. Aucun appel à Google Fonts : plus rapide et sans transfert de données vers Google (RGPD).
+- **Cache** : `vercel.json` fixe la durée de cache navigateur (polices 1 an, images 1 semaine, CSS/JS 1 h). Si vous remplacez une police, changez aussi son nom de fichier.
+
+### Performance mobile (Lighthouse, mobile simulé, 21/10/2026)
+| Page | Avant | Après |
+|---|---|---|
+| Accueil | 78 (LCP 3,8 s) | 99 (LCP 2,0 s) |
+| Conventionné CPAM | 93 | 100 |
+| Contact | 88 | 99 |
 - **Photo de famille** : remplacez la grande photo de l'album (section « Une famille au volant » de `index.html` et `a-propos.html`) dès qu'elle est disponible (commentaire `À FOURNIR` dans le code).
 
 ---

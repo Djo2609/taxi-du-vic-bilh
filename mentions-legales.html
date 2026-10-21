@@ -29,10 +29,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- Polices (swap) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Familjen+Grotesk:wght@600;700&amp;family=Figtree:wght@400;500;700&amp;display=swap">
+  <!-- Polices auto-hébergées (assets/fonts, déclarées dans style.css) : préchargement des deux principales -->
+  <link rel="preload" href="assets/fonts/familjen-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 
@@ -127,7 +126,7 @@
         <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition. Pour l'exercer, écrivez à <a href="mailto:taxiduvicbilh@gmail.com">taxiduvicbilh@gmail.com</a>. Vous pouvez également saisir la CNIL (www.cnil.fr).</p>
 
         <h2>Cookies</h2>
-        <p>Ce site n'utilise aucun cookie publicitaire ni outil de mesure d'audience. La carte de la page Contact est fournie par OpenStreetMap ; les polices de caractères sont servies par Google Fonts.</p>
+        <p>Ce site n'utilise aucun cookie publicitaire ni outil de mesure d'audience. La carte de la page Contact est fournie par OpenStreetMap ; les polices de caractères sont hébergées directement sur ce site (aucun appel à Google Fonts).</p>
 
         <h2>Crédits</h2>
         <p>Photographies : Taxi du Vic-Bilh. Conception du site : [nom de l'agence].</p>
