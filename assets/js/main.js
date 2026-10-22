@@ -208,7 +208,7 @@
         var body = [];
         data.forEach(function (v, k) { if (k !== '_gotcha' && k !== 'rgpd') body.push(k + ' : ' + v); });
         window.location.href = 'mailto:taxiduvicbilh@gmail.com?subject=' +
-          encodeURIComponent('Demande de réservation — site web') + '&body=' + encodeURIComponent(body.join('\n'));
+          encodeURIComponent('Formulaire de contact — site web') + '&body=' + encodeURIComponent(body.join('\n'));
         return;
       }
       if (!window.fetch) return;
