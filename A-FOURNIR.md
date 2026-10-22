@@ -34,6 +34,10 @@ Images déjà intégrées (récupérées sur la page Facebook publique du client
 - [ ] **Distances et temps du « tableau de route »** : valeurs indicatives (arrondies) à faire relire par le chauffeur.
 - [ ] **Liste des communes desservies** : à ajuster selon les habitudes réelles.
 
+- [ ] **Numéros des deux licences (ADS)** de Caubios-Loos et de Labastide-Monréjeau : les communes sont affichées (bulle de l'accueil, zone desservie, mentions légales), les numéros restent à compléter dans `mentions-legales.html`.
+- [ ] **« Fauteuil médicalisé »** : préciser ce que ça couvre (fauteuil roulant pliant transporté dans le coffre ? transfert du patient ?) pour éviter tout malentendu côté patients et CPAM.
+- [ ] **« Animaux acceptés »** : conditions éventuelles (taille, caisse de transport, supplément) à indiquer dans la FAQ si besoin.
+
 ## 3. Éléments laissés en placeholder
 
 - [ ] **Mentions légales** : forme juridique, SIRET, TVA, n° ADS, carte professionnelle, n° de convention CPAM, responsable de publication, hébergeur, agence (tout ce qui est entre crochets).
