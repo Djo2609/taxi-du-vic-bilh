@@ -34,7 +34,7 @@ Site **multipage** : une page par sujet et **une page par service** (c'est ce qu
 
 ### Éléments signature
 - **Carte postale** « Bons baisers du Vic-Bilh » en haut de l'accueil (timbre et tampon dessinés en SVG).
-- **Planificateur « On part à quelle heure ? »** (accueil et contact) : destination, heure du rendez-vous, adultes / enfants, bagages → heure de passage conseillée, sièges enfants, 1 ou 2 taxis. « Réserver ce trajet » pré-remplit le formulaire de `contact.html` (paramètres d'URL).
+- **Planificateur « On part à quelle heure ? »** (accueil et contact) : destination, heure du rendez-vous, adultes / enfants, bagages → heure de passage conseillée, sièges enfants, 1 ou 2 taxis. « Envoyer ce trajet » pré-remplit le formulaire de `contact.html` (paramètres d'URL).
 - **« Les règles de la maison »** (page La famille) : note aimantée sur le frigo.
 - **Frise « Une journée avec nous »** (page Services) sur une route dessinée, avec les heures dans des bornes kilométriques.
 
@@ -57,7 +57,7 @@ Ouvrez ensuite http://localhost:8000.
 ## 3. Avant la mise en ligne (obligatoire)
 
 1. **Nom de domaine.** Le site part du principe que l'adresse sera `https://www.taxiduvicbilh.fr`. Si l'adresse est différente, faites un « rechercher / remplacer » de `https://www.taxiduvicbilh.fr` dans **tous** les fichiers (`.html`, `sitemap.xml`, `robots.txt`, `llms.txt`).
-2. **Formulaire de réservation** (page `contact.html`) :
+2. **Formulaire de contact** (page `contact.html`) :
    - Créez un compte gratuit sur https://formspree.io avec l'adresse `taxiduvicbilh@gmail.com`, puis créez un formulaire.
    - Remplacez `VOTRE_ID` dans `contact.html` (`action="https://formspree.io/f/VOTRE_ID"`) par l'identifiant fourni.
    - Tant que ce n'est pas fait, le bouton « Envoyer » ouvre la messagerie du visiteur avec la demande pré-remplie : aucune demande n'est perdue.

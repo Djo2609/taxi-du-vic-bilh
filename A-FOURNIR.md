@@ -41,7 +41,7 @@ Images déjà intégrées (récupérées sur la page Facebook publique du client
 ## 3. Éléments laissés en placeholder
 
 - [ ] **Mentions légales** : forme juridique, SIRET, TVA, n° ADS, carte professionnelle, n° de convention CPAM, responsable de publication, hébergeur, agence (tout ce qui est entre crochets).
-- [ ] **Formulaire de réservation** (`contact.html`) : remplacer `VOTRE_ID` par l'identifiant Formspree (voir README §3).
+- [ ] **Formulaire de contact** (`contact.html`) : remplacer `VOTRE_ID` par l'identifiant Formspree (voir README §3).
 - [ ] **Avis clients** : la page Facebook affiche 0 avis. La page `avis.html` et le bandeau avis de l'accueil invitent à en laisser ; dès que les premiers vrais avis arrivent, en afficher 2 ou 3 à cet endroit. Aucun avis n'a été inventé.
 - [ ] **Lien « laisser un avis Google »** : à récupérer une fois la fiche Google Business Profile créée.
 - [ ] **Polaroïd « CHU de Bordeaux, juste à temps »** (page Sur la route et zone desservie de la page Contact) : repris de la dernière publication Facebook.

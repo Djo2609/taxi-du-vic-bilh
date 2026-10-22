@@ -70,7 +70,7 @@
     items.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* Pré-remplissage du formulaire de réservation (planificateur ou paramètres d'URL) */
+  /* Pré-remplissage du formulaire de contact (planificateur ou paramètres d'URL) */
   function fillBooking(d) {
     var set = function (id, v) { var f = document.getElementById(id); if (f && v) f.value = v; };
     set('f-arr', d.arr);
@@ -140,7 +140,7 @@
         : (dur !== null ? 'Arrivée 15 minutes avant votre rendez-vous' : 'Devis gratuit, prix annoncé avant le départ'));
       if (e > 0) notes.push(plural(e, 'siège enfant installé', 'sièges enfants installés') + ' avant votre arrivée');
       if (taxis > 1) notes.push('On vient à ' + taxis + ' taxis : la famille au complet au volant');
-      if (bag.checked) notes.push('Coffre réservé pour les valises, la poussette ou le fauteuil');
+      if (bag.checked) notes.push('Place prévue dans le coffre pour les valises, la poussette ou le fauteuil');
       $('p-notes').innerHTML = notes.map(function (n) { return '<li>' + check + '<span>' + n + '</span></li>'; }).join('');
 
       var hand = 'On s’occupe du reste !';
@@ -165,7 +165,7 @@
     });
     [dest, rdv, bag].forEach(function (el) { el.addEventListener('change', render); el.addEventListener('input', render); });
 
-    // « Réserver ce trajet » : pré-remplit le formulaire de contact
+    // « Envoyer ce trajet » : pré-remplit le formulaire de contact
     // (sur la même page s'il existe, sinon via contact.html?… )
     $('p-book').addEventListener('click', function () {
       var data = {
@@ -196,7 +196,7 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  /* Formulaire de réservation : envoi AJAX si un endpoint est configuré */
+  /* Formulaire de contact : envoi AJAX si un endpoint est configuré */
   var form = document.querySelector('form[data-booking]');
   if (form) {
     var status = form.querySelector('.form-status');
